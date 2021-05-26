@@ -21,9 +21,15 @@
     }
     
     const logTodos = () => {
-        console.log(arrayOfTodos)
+        
     }
     
     const populateTodos = () => {
-    
+        let title = arrayOfTodos[0].title
+        let list = document.getElementById('todo-list')
+        let listItem = document.createElement('LI')
+        let todo = document.createTextNode(title)
+        
+        listItem.appendChild(todo)
+        list.appendChild(listItem)
     }
