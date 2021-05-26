@@ -1,0 +1,89 @@
+/************** 
+Colors 
+
+Light Blue: 28abb9
+Dark Blue: 2d6187
+Light Green: effad3
+Dark Green: a8dda8
+**************/
+
+/**************
+Fonts 
+
+font-family: 'Pattaya', sans-serif;
+font-family: 'Poppins', sans-serif;
+**************/
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #2d6187;
+    font-family: 'Poppins', sans-serif;
+}
+
+.todos-container {
+    max-width: 850px;
+    margin: auto;
+    background-color: #a8dda8;
+    padding: 1rem;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    color: #2d6187;
+    font-family: 'Pattaya', sans-serif;
+}
+
+.todo-buttons {
+    margin-bottom: 1rem;
+}
+
+.todo-buttons button {
+    display: block;
+    width: 100%;
+    border: 3px solid #2d6187;
+    border-radius: 15px;
+    background-color: #28abb9;
+    color: #fff;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.todo-buttons button:hover,
+.todo-buttons button:active,
+.todo-buttons button:focus {
+    border: 3px solid #28abb9;
+    background-color: #2d6187;
+}
+
+.todo-results {
+    background-color: #effad3;
+    border-radius: 15px;
+    padding: 1rem;
+}
+
+@media(min-width: 768px) {
+    .todos-container {
+        padding: 3rem;
+    }
+
+    .todo-buttons {
+        display: grid;
+        grid-template-columns: repeat(3, 150px);
+        grid-column-gap: 1rem;
+        justify-content: center;
+    }
+}
+
+@media(min-width: 992px) {
+    .todos-container {
+        border-radius: 15px;
+        margin: 3rem auto;
+    }
+}
