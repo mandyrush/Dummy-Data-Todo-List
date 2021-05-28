@@ -14,6 +14,12 @@
         <header>
             <h1>My Todos</h1>
         </header>
+        <div class="user-input">
+            <label for="user-id">Select a Number</label>
+            <input type="range" id="user-id" name="user-id" min="1" max="10">
+            <p id="user-selection"></p>
+            <button type="submit" onclick="filterTodos()">Submit</button>
+        </div>
         <div class="todo-buttons">
             <button onclick="fetchTodos()">Fetch Todos</button>
             <button onclick="logTodos()">Log Todos</button>
