@@ -36,6 +36,17 @@ header {
 h1 {
     color: #2d6187;
     font-family: 'Pattaya', sans-serif;
+    font-size: 2.5rem;
+}
+
+.user-input {
+    text-align: center;
+}
+
+#user-selection {
+    color: #2d6187;
+    font-size: 1.25rem;
+    font-weight: 700;
 }
 
 .todo-buttons {
@@ -63,6 +74,9 @@ h1 {
 }
 
 .todo-results {
+    font-family: 'Pattaya', sans-serif;
+    letter-spacing: 2px;
+    font-size: 1.15rem;
     background-color: #effad3;
     border-radius: 15px;
     padding: 1rem;
@@ -75,7 +89,8 @@ h1 {
 
     .todo-buttons {
         display: grid;
-        grid-template-columns: repeat(3, 150px);
+        grid-template-columns: repeat(2, 200px);
+        grid-template-rows: repeat(2, 1fr);
         grid-column-gap: 1rem;
         justify-content: center;
     }
@@ -85,5 +100,10 @@ h1 {
     .todos-container {
         border-radius: 15px;
         margin: 3rem auto;
+    }
+
+    .todo-buttons {
+        grid-template-columns: repeat(4, 200px);
+        grid-template-rows: 1fr;
     }
 }

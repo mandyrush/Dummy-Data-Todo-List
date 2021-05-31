@@ -18,8 +18,7 @@
     
     let filterTodos = () => {
         let userId = parseInt(document.getElementById('user-id').value)
-        clearList()
-
+        
         setUserId(userId)
         
         filteredArray = arrayOfTodos.filter(todo => parseInt(todo.userId) === userId)
@@ -50,6 +49,8 @@
     }
     
     const populateTodos = (data) => {
+        clearList()
+
         if(typeof data == 'undefined') {
             data = arrayOfTodos
         }
