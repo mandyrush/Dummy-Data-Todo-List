@@ -13,6 +13,30 @@
         "title": "delectus aut autem",
         "completed": false
     }]
+
+    
+    
+    let filterTodos = () => {
+        let userId = parseInt(document.getElementById('user-id').value)
+        
+        setUserId(userId)
+        
+        filteredArray = arrayOfTodos.filter(todo => parseInt(todo.userId) === userId)
+        populateTodos(filteredArray)
+    }
+
+    let setUserId = (id) => {
+        let userSelection = document.getElementById('user-selection')
+        userSelection.innerHTML = ''
+        let selectionText = document.createTextNode('Filtered By: ' + id)
+        userSelection.appendChild(selectionText)
+        console.log('userId', id)
+    }
+
+    const clearList =() => {
+        let list = document.getElementById('todo-list')
+        list.innerHTML = ''
+    }
     
     const fetchTodos = () => {
         fetch('https://jsonplaceholder.typicode.com/todos')
@@ -21,12 +45,18 @@
     }
     
     const logTodos = () => {
-        
+        console.log(arrayOfTodos)    
     }
     
-    const populateTodos = () => {
-        for (i = 0; i < arrayOfTodos.length; i++) {
-            let title = arrayOfTodos[i].title
+    const populateTodos = (data) => {
+        clearList()
+
+        if(typeof data == 'undefined') {
+            data = arrayOfTodos
+        }
+
+        for (i = 0; i < data.length; i++) {
+            let title = data[i].title
             let list = document.getElementById('todo-list')
             let listItem = document.createElement('LI')
             let todo = document.createTextNode(title)
@@ -34,4 +64,5 @@
             listItem.appendChild(todo)
             list.appendChild(listItem)
         }
+        console.log('data', data)
     }
